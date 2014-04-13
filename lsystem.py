@@ -2,6 +2,11 @@ class LSystem:
     '''Represents an L-System with intial state, production rules and alphabet.
     '''
     def __init__(self, initial, productions, alphabet=None):
+        '''
+        :param initial: A string of symbols representing the initial state.
+        :param productions: A dictionary from symbol to a string of symbols.
+        :param alphabet: A list of alphabet in the language.
+        '''
         self.initial = initial
         self.productions = productions
         self.alphabet = alphabet
