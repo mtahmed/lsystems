@@ -1,13 +1,14 @@
-from  lsystem import *
-import turtle
 import sys
+import turtle
 
-class Triforce_LSystem(LSystem):
+from  lsystem import *
+
+class TriforceLSystem(LSystem):
     def __init__(self):
-        super(Triforce_LSystem, self).__init__("X", {"X":"FF-[FX]+[FX]+[FX]", "F":"FF"})
+        super(TriforceLSystem, self).__init__("X", {"X":"FF-[FX]+[FX]+[FX]", "F":"FF"})
 
     def draw(self):
-        super(Triforce_LSystem, self).draw()
+        super(TriforceLSystem, self).draw()
 
         turtle.setup(800,600)
         wn = turtle.Screen()
@@ -44,6 +45,7 @@ class Triforce_LSystem(LSystem):
 
         wn.exitonclick()
 
-plant = Triforce_LSystem()
-plant.step_n(int(sys.argv[1]))
-plant.draw()
+if __name__ == '__main__':
+    plant = TriforceLSystem()
+    plant.step_n(int(sys.argv[1]))
+    plant.draw()

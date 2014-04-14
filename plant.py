@@ -1,13 +1,14 @@
-from  lsystem import *
-import turtle
 import sys
+import turtle
 
-class Plant_LSystem(LSystem):
+from  lsystem import *
+
+class PlantLSystem(LSystem):
     def __init__(self):
-        super(Plant_LSystem, self).__init__("X", {"X":"F-[[X]+X]+F[+FX]-X", "F":"FF"})
+        super(PlantLSystem, self).__init__("X", {"X":"F-[[X]+X]+F[+FX]-X", "F":"FF"})
 
     def draw(self):
-        super(Plant_LSystem, self).draw()
+        super(PlantLSystem, self).draw()
 
         turtle.setup(800,600)
         wn = turtle.Screen()
@@ -43,6 +44,7 @@ class Plant_LSystem(LSystem):
 
         wn.exitonclick()
 
-plant = Plant_LSystem()
-plant.step_n(int(sys.argv[1]))
-plant.draw()
+if __name__ == '__main__':
+    plant = PlantLSystem()
+    plant.step_n(int(sys.argv[1]))
+    plant.draw()

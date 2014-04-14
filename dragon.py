@@ -1,14 +1,15 @@
-from  lsystem import *
-import turtle
-import sys
 import math
+import sys
+import turtle
 
-class Dragon_LSystem(LSystem):
+from  lsystem import *
+
+class DragonLSystem(LSystem):
     def __init__(self):
-        super(Dragon_LSystem, self).__init__("LFX", {"X":"X+YF", "Y":"FX-Y", "L":"CL"})
+        super(DragonLSystem, self).__init__("LFX", {"X":"X+YF", "Y":"FX-Y", "L":"CL"})
 
     def draw(self):
-        super(Dragon_LSystem, self).draw()
+        super(DragonLSystem, self).draw()
 
         turtle.setup(800,600)
         wn = turtle.Screen()
@@ -38,6 +39,7 @@ class Dragon_LSystem(LSystem):
 
         wn.exitonclick()
 
-dragon = Dragon_LSystem()
-dragon.step_n(int(sys.argv[1]))
-dragon.draw()
+if __name__ == '__main__':
+    dragon = DragonLSystem()
+    dragon.step_n(int(sys.argv[1]))
+    dragon.draw()
