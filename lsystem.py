@@ -1,4 +1,4 @@
-class LSystem:
+class LSystem(object):
     '''Represents an L-System with intial state, production rules and alphabet.
     '''
     def __init__(self, initial, productions, alphabet=None):
@@ -26,7 +26,7 @@ class LSystem:
                 new_symbol = self.productions[symbol]
                 new_symbols.append(new_symbol)
             except KeyError:
-                pass
+                new_symbols.append(symbol)
 
         self.state = ''.join(new_symbols)
 
