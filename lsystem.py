@@ -1,4 +1,4 @@
-class LSystem(object):
+class LSystem:
     '''Represents an L-System with intial state, production rules and alphabet.
     '''
     def __init__(self, initial, productions, alphabet=None):
